@@ -8,6 +8,14 @@ gem 'pg'
 
 gem 'simple_form'
 
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'launchy'
+  gem 'valid_attribute'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
