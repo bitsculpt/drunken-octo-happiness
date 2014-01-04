@@ -3,6 +3,7 @@
   <%= f.input :city %>
   <%= f.input :state %>
   <%= f.input :postal_code %>
-  <%= f.input :description %>    
+  <%= f.input :description %> 
+  <%= f.association :owner, :label_method => :first_name, :value_method => :id  %>   
   <%= f.button :submit %>
 <% end %>

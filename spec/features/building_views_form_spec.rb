@@ -19,11 +19,15 @@ feature "User submits a new building" do
     visit "/buildings"
     click_link "New Building"
     description = "This is a placeholder building description"
+   
     fill_in "building[street_address]", :with => "33 Harrison Ave"
     fill_in "building[city]", :with => "Boston"
     fill_in "building[state]", :with => "Massachussets"
     fill_in "building[postal_code]", :with => "38555"
     fill_in "building[description]", :with => description
+    select 'David', :from => "building[owner_id]"
+    #find("option[value='David']").click
+    #find_by_id('building_owner_id').find("option[value='David']").click
     click_button "Create Building"
     expect(page).to have_content(description)
 
