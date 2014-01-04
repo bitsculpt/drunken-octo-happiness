@@ -1,0 +1,31 @@
+<h1> show page </h1>
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <strong>Street Address:</strong>
+  <%= @building.street_address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @building.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @building.state %>
+</p>
+
+<p>
+  <strong>Postal Code:</strong>
+  <%= @building.postal_code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @building.description %>
+</p>
+
+<%= link_to "Return To Index", root_path %>
