@@ -29,5 +29,40 @@ feature "User submits a new building" do
 
     expect(Building.count).to eq(1)
   end
+end
+feature "requires a street address" do
 
+  it 'returns an error if no street_address' do
+    visit "/buildings/new"
+    click_on "Create Building"
+    expect(page).to have_content "can't be blank"
+  end
+end
+feature "requires a city" do
+
+  it 'returns an error if no city is specified' do
+    visit "/buildings/new"
+    click_on "Create Building"
+    expect(page).to have_content "can't be blank"
+  end
+end
+
+feature "requires a state" do
+
+  it 'returns an error if no state is specified' do
+    visit "/buildings/new"
+    click_on "Create Building"
+    expect(page).to have_content "can't be blank"
+  end
+end
+
+ 
+
+feature "requires a postal code" do
+
+  it 'returns an error if no postal code is specified' do
+    visit "/buildings/new"
+    click_on "Create Building"
+    expect(page).to have_content "can't be blank"
+  end
 end
